@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.internfreak.Adapter.Connect_Adapter
 import com.example.internfreak.R
+import com.example.internfreak.data.data1
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +32,22 @@ class Connect : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val data= arrayListOf<data1>()
+
+        data.add(data1(R.drawable.amazon,"Amazon"))
+        data.add(data1(R.drawable.infosyslimited,"Infosys"))
+        data.add(data1(R.drawable.netflixlogo,"Netflix"))
+        data.add(data1(R.drawable.tcs,"TCS"))
+
+
+        val recycler = view.findViewById<RecyclerView>(R.id.connect_rv)
+        recycler.layoutManager = GridLayoutManager(view.getContext(),2)
+        //LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true)
+        recycler.adapter = Connect_Adapter(data)
     }
 
     override fun onCreateView(
