@@ -15,8 +15,17 @@
             android:name=".InternshipApplication"
             android:exported="false" />
         <activity
+            android:name=".CompanyDetails"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetails"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".SignInActivity"
             android:exported="true">
@@ -26,6 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
