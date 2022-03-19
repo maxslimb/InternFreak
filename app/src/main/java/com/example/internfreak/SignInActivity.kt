@@ -24,6 +24,11 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+//        val sign_in_btn = findViewById<Button>(R.id.google_sign_in)
+//        sign_in_btn.setOnClickListener {
+//            val intent = Intent(this,MainActivity::class.java)
+//            startActivity(intent)
+//        }
         auth  = Firebase.auth
         val signin_button = findViewById<com.google.android.gms.common.SignInButton>(R.id.google_sign_in)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -77,7 +82,7 @@ class SignInActivity : AppCompatActivity() {
                         //startActivity(Intent(this,SignupActivity::class.java))
                     }
                     else {
-                        val intent = Intent(this,MainActivity::class.java)
+                        val intent = Intent(this,EditProfile::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                     }
