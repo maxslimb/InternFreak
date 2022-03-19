@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "848641321007",
+    "project_id": "internfreak-dd4e5",
+    "storage_bucket": "internfreak-dd4e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848641321007:android:4f7674a1a43b9a34887eda",
+        "android_client_info": {
+          "package_name": "com.example.internfreak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848641321007-hiln3kiu40dm90c8ns41uofvpnp32crs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.internfreak",
+            "certificate_hash": "9875779df3016f7f644a0e61746ed705f0208135"
+          }
+        },
+        {
+          "client_id": "848641321007-uotokb0ko59odfok1h2t7ds926bf6bhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxdFQ7w7duZEOB617j7QrUpPz--_OcQCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848641321007-uotokb0ko59odfok1h2t7ds926bf6bhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

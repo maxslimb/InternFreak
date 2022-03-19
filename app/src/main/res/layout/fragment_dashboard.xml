@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.Dashboard">
+
+
+
+    <TextView
+        android:layout_width="212dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="30dp"
+        android:text="InternFreak"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+
+<!--    <EditText-->
+<!--        android:layout_width="304dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="60dp"/>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="308dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="75dp"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/dashboard_cardview_1"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="308dp"
+        android:layout_height="131dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="425dp"
+        android:layout_marginLeft="75dp"
+        android:id="@+id/dashboard_cardview_2"/>
+
+
+</FrameLayout>
