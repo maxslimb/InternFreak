@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
+            android:name=".CompanyDetails"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetails"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,12 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SignInActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
