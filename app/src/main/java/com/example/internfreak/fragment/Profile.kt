@@ -27,12 +27,6 @@ class Profile : Fragment() {
             startActivity(intent)
         }
 
-        val signout = view.findViewById<Button>(R.id.btn_signout)
-        signout.setOnClickListener {
-            Firebase.auth.signOut()
-            val intent= Intent(view.context, SignInActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 
@@ -41,11 +35,9 @@ class Profile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
-
-
-
 
 
 }
