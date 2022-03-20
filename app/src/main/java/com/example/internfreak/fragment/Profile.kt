@@ -27,6 +27,14 @@ class Profile : Fragment() {
             startActivity(intent)
         }
 
+        val signout = view.findViewById<Button>(R.id.btn_signout)
+        signout.setOnClickListener {
+            Firebase.auth.signOut()
+            val intent= Intent(view.context, SignInActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 
