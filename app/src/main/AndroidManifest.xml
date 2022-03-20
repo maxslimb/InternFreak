@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
-            android:name=".InternshipApplication"
+
             android:name=".SplashScreen"
             android:exported="false" />
         <activity
@@ -25,7 +25,7 @@
             android:exported="true"/>
 
 
-        </activity>
+
         <activity
             android:name=".CompanyDetails"
             android:exported="false" />
