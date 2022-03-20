@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
-            android:name=".SplashScreen"
+            android:name=".Applications_list"
             android:exported="false" />
         <activity
             android:name=".EditProfile"
@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Applications_list"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
