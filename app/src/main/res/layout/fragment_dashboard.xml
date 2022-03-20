@@ -7,6 +7,14 @@
     tools:context=".fragment.Dashboard">
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Dashbboard_rv"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="582dp"
+        android:layout_marginTop="150dp" />
+
 
     <TextView
         android:layout_width="212dp"
@@ -20,27 +28,19 @@
         />
 
 
-<!--    <EditText-->
-<!--        android:layout_width="304dp"-->
-<!--        android:layout_height="44dp"-->
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:layout_marginLeft="60dp"/>-->
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="308dp"
-        android:layout_height="131dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginLeft="75dp"
-        app:cardCornerRadius="15dp"
-        android:id="@+id/dashboard_cardview_1"/>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="308dp"
-        android:layout_height="131dp"
-        app:cardCornerRadius="15dp"
-        android:layout_marginTop="425dp"
-        android:layout_marginLeft="75dp"
-        android:id="@+id/dashboard_cardview_2"/>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:contextClickable="true"
+        android:outlineSpotShadowColor="@color/black"
+        android:background="@color/grey"
+        android:layout_marginRight="50dp"/>
+    
 
 
 </FrameLayout>

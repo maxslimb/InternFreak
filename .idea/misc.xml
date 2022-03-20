@@ -16,10 +16,11 @@
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_blank.xml" value="0.10869565217391304" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_connect.xml" value="0.16032608695652173" />
-        <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
+        <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_dashboard.xml" value="0.18" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_nearby__internship.xml" value="0.16032608695652173" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android/InternFreak/app/src/main/res/layout/itemview_dashboard.xml" value="0.33" />
       </map>
     </option>
   </component>
