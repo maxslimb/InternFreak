@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -40,6 +41,7 @@ class Nearby_Internship : Fragment() {
     private lateinit var database: FirebaseDatabase
     private lateinit var data: ArrayList<datanearby>
     private lateinit var  recycler: RecyclerView
+    private lateinit var  progressbar: ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -51,11 +53,11 @@ class Nearby_Internship : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+         progressbar = view.findViewById(R.id.progressbar_nearby_internships)
          data= arrayListOf()
          recycler = view.findViewById(R.id.recylerview)
-        recycler.layoutManager = GridLayoutManager(view.context,2)
-
-        recycler.adapter = NearbyAdapter(data)
+         recycler.layoutManager = GridLayoutManager(view.context,2)
+         recycler.adapter = NearbyAdapter(data)
     }
 
     override fun onCreateView(
@@ -125,6 +127,7 @@ class Nearby_Internship : Fragment() {
                                 if((lat<lat_max)&&(lat>lat_min)&&(long>long_min)&&(long<long_max)){
                                     Log.d("data_selected","${it.value}")
                                     it.getValue<datanearby>()?.let { it1 -> data.add(it1) }
+                                    progressbar.visibility = View.GONE
                                     recycler.adapter!!.notifyDataSetChanged()
                                 }
 
