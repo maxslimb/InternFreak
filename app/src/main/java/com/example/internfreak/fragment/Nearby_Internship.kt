@@ -8,32 +8,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.internfreak.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Nearby_Internship.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Nearby_Internship : Fragment() {
-    // TODO: Rename and change types of parameters
+
+    private  val ARG_PARAM1 = "param1"
+    private  val ARG_PARAM2 = "param2"
+
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var database: FirebaseDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this.context)
     }
 
     override fun onCreateView(
@@ -41,9 +45,12 @@ class Nearby_Internship : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        getLastKnownLocation()
+
+
 
 // in onCreate() initialize FusedLocationProviderClient
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireView().context)
+
 
         /**
          * call this method for receive location
@@ -51,38 +58,62 @@ class Nearby_Internship : Fragment() {
          * function itself check location permission before access related methods
          *
          */
-        fun getLastKnownLocation() {
-            if (ActivityCompat.checkSelfPermission(
-                    requireView().context,
-                    Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                    requireView().context,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                //
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return
-            }
-            fusedLocationClient.lastLocation
-                .addOnSuccessListener { location->
-                    if (location != null) {
-                       Log.d("Maindebud","Location: $location")
-                        //19.048391 73.071286
 
-                    }
-
-                }
-
-        }
 
         return inflater.inflate(R.layout.fragment_nearby__internship, container, false)
     }
+    fun getLastKnownLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                requireActivity().applicationContext,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                requireActivity().applicationContext,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            Log.d("aaaaaaaaaaaa","permissions prob")
+            return
+        }
+        fusedLocationClient.lastLocation
+            .addOnSuccessListener { location->
+                if (location != null) {
+                    Log.d("Maindebud","Location_lat: ${location.latitude}, " +
+                            "Location_long: ${location.longitude}")
+                    //19.048391 73.071286
+                    Toast.makeText(requireView().context,"Location: $location",Toast.LENGTH_SHORT).show()
 
+                    database = Firebase.database
+                    val query1 = database.reference.child("Users/")
+                        .orderByChild("location_lat")
+
+                    query1.addValueEventListener(object : ValueEventListener {
+                        override fun onCancelled(error: DatabaseError) {
+                            Toast.makeText(view!!.context,"error: Couldn't find any location",Toast.LENGTH_SHORT).show()
+                            Log.w("location", "Couldn't find any location")
+                        }
+
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            snapshot.children.forEach {
+
+                                Log.d("location","${it.child("location_lat")}")
+                                Toast.makeText(view!!.context,"Found: ${it.value}",Toast.LENGTH_SHORT).show()
+
+                                query1.removeEventListener(this)
+
+                            }
+
+                        }
+                    })
+
+                }
+
+
+            }
+            .addOnFailureListener {
+                Log.d("Maindebud","Location error: ${it.toString()}")
+            }
+
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
