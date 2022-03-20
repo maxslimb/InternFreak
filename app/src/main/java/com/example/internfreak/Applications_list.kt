@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.Adapter.applications_list_Adapter
 import com.example.internfreak.data.data1
 import com.example.internfreak.data.dataapplications
+import java.lang.Boolean.TRUE
 
 class Applications_list : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class Applications_list : AppCompatActivity() {
 
 
         val recycler = findViewById<RecyclerView>(R.id.applications_rv)
-        LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true)
+        recycler.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true)
         recycler.adapter = applications_list_Adapter(data1)
     }
 }

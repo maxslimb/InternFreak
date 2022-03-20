@@ -12,8 +12,8 @@ import com.example.internfreak.data.dataapplications
 
 class applications_list_Adapter(var dataapplications: List<dataapplications>): RecyclerView.Adapter<applications_list_Adapter.IntViewHolder>() {
     class IntViewHolder(val  row: View) : RecyclerView.ViewHolder(row){
-        val imageView = row.findViewById<ImageView>(R.id.roleapplied)
-        val textView1 = row.findViewById<TextView>(R.id.userName)
+        val imageView = row.findViewById<ImageView>(R.id.userImage)
+        val textView1 = row.findViewById<TextView>(R.id.roleapplied)
         val textView2 = row.findViewById<TextView>(R.id.userName)
         val textView3 = row.findViewById<TextView>(R.id.user_location)
 
