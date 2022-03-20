@@ -3,6 +3,7 @@ package com.example.internfreak
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +44,8 @@ class CompanyDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_details)
         CheckPermission()
-
+        val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        sharedPreferences.edit().putString("user","company").apply()
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         getLastKnownLocation()
         val name_company = findViewById<TextInputEditText>(R.id.name_company)

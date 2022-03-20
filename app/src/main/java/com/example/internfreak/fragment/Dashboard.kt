@@ -46,9 +46,6 @@ class Dashboard : Fragment() {
 
         database = FirebaseDatabase.getInstance().getReference("Company/Internships")
         val company_data = arrayListOf<company_data>()
-//
-//        data.add(data2("Netflix","Immediatly","1 Month","None",""))
-//        data.add(data2("Amazon","Immediatly","1 Month","10000",""))
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
