@@ -13,7 +13,8 @@ class studentdata(
     var dept_student: String? = "",
     var skills_student: String? = ""
 
-)
+
+    )
 {
     @Exclude
     fun toMap(): Map<String, Any?> {
