@@ -89,7 +89,9 @@ class EditProfile : AppCompatActivity() {
 
 
         val database = Firebase.database.reference
-        val editprofiledata = editprofiledata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
+        val editprofiledata = editprofiledata(name_student,address_student,email_student,
+            mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student
+        )
         val data = editprofiledata.toMap()
 
         val editprofileupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/Profile_Student" to data)

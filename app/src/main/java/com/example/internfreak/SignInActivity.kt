@@ -76,7 +76,7 @@ class SignInActivity : AppCompatActivity() {
                     val user = auth.currentUser
 
                     if( task.result!!.additionalUserInfo!!.isNewUser) {
-                        val intent = Intent(this, SignInActivity::class.java)
+                        val intent = Intent(this, EditProfile::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         //startActivity(Intent(this,SignupActivity::class.java))
