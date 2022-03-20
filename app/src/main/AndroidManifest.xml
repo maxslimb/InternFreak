@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
+            android:name=".SplashScreen"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".CompanyDetails"
             android:exported="false" />
@@ -24,15 +25,17 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".Applications_list"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
