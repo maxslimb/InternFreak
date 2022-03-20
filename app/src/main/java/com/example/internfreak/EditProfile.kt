@@ -47,8 +47,8 @@ class EditProfile : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 ed_name_student.setText(snapshot.child("name_input").value.toString())
                 ed_address_student.setText(snapshot.child("address_input").value.toString())
-                ed_email_student.setText(snapshot.child("name_input").value.toString())
-                ed_mobile_no_student.setText(snapshot.child("name_input").value.toString())
+                ed_email_student.setText(snapshot.child("email_input").value.toString())
+                ed_mobile_no_student.setText(snapshot.child("mobile_input").value.toString())
                 ed_Qname_of_college.setText(snapshot.child("name_input").value.toString())
                 ed_Qyear_student.setText(snapshot.child("name_input").value.toString())
                 ed_QDept_student.setText(snapshot.child("name_input").value.toString())
