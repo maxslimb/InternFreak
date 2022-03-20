@@ -2,6 +2,7 @@ package com.example.internfreak
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.internfreak.data.data_application_internship
 import com.example.internfreak.data.data_host_internship
 import com.google.android.material.textfield.TextInputEditText
@@ -21,15 +22,20 @@ class HostInternship : AppCompatActivity() {
         val start_date = findViewById<TextInputEditText>(R.id.sstart_date)
         val duration = findViewById<TextInputEditText>(R.id.sduration)
         val perks = findViewById<TextInputEditText>(R.id.sperks)
+        val post_button = findViewById<Button>(R.id.Post_application)
 
 
-        writedata(job_role.text.toString(),
-            description.text.toString(),
-            company_name.text.toString(),
-            openings.text.toString(),
-            start_date.text.toString(),
-            duration.text.toString(),
-            perks.text.toString())
+        post_button.setOnClickListener {
+            writedata(job_role.text.toString(),
+                description.text.toString(),
+                company_name.text.toString(),
+                openings.text.toString(),
+                start_date.text.toString(),
+                duration.text.toString(),
+                perks.text.toString())
+
+        }
+
 
 
 
@@ -51,8 +57,8 @@ class HostInternship : AppCompatActivity() {
         val user_data = data_host_internship(job_role,description,company_name,openings,start_date,duration,perks)
         val data = user_data.toMap()
         val key  = database.push().key
-        val userupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/Internships" to data,
-            "Company/Internships" to data)
+        val userupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/Internships/$key" to data,
+            "Company/Internships/$key" to data)
         database.updateChildren(userupdates)
 
     }

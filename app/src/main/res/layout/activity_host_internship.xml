@@ -83,8 +83,7 @@
             android:layout_width="match_parent"
             android:id="@+id/sdescription"
             android:layout_height="wrap_content"
-            android:hint="Description"
-            android:inputType="textWebEmailAddress" />
+            android:hint="Description" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +109,7 @@
             android:id="@+id/scompany_name_host"
             android:layout_height="wrap_content"
             android:hint="Company Name"
-            android:inputType="phone" />
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -135,7 +134,7 @@
             android:id="@+id/sopenings"
             android:layout_height="wrap_content"
             android:hint="Openings"
-            android:inputType="date" />
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -160,7 +159,8 @@
             android:layout_width="match_parent"
             android:id="@+id/sstart_date"
             android:layout_height="wrap_content"
-            android:hint="Start Date" />
+            android:hint="Start Date"
+            android:inputType="date"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -185,7 +185,8 @@
             android:layout_width="match_parent"
             android:id="@+id/sduration"
             android:layout_height="wrap_content"
-            android:hint="Duration" />
+            android:hint="Duration"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout

@@ -69,6 +69,7 @@ class Dashboard : Fragment() {
 
                 recycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, true)
                 recycler.adapter = dashboardAdapter(company_data)
+
             }
         })
     }
