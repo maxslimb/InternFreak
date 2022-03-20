@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.internfreak">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,13 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
-            android:name=".EditProfile"
-            android:exported="true" >
-
-        </activity>
-        <activity
-            android:name=".InternshipApplication"
+            android:name=".HostInternship"
             android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="true"></activity>
         <activity
             android:name=".CompanyDetails"
             android:exported="false" />
@@ -26,11 +22,8 @@
             android:name=".StudentDetails"
             android:exported="false" />
         <activity
-            android:name=".EditProfile"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="true">
@@ -40,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <meta-data
             android:name="preloaded_fonts"
