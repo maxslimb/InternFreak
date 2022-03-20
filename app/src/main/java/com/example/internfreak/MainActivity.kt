@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val profile= Profile()
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

@@ -16,13 +16,15 @@
             android:name=".InternshipApplication"
             android:exported="false" />
         <activity
+            android:name=".EditProfile"
+            android:exported="true" >
+
+        </activity>
+        <activity
             android:name=".CompanyDetails"
             android:exported="false" />
         <activity
             android:name=".StudentDetails"
-            android:exported="false" />
-        <activity
-            android:name=".EditProfile"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
