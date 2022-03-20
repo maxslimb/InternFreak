@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="10dp"
     android:padding="25dp"
     app:cardBackgroundColor="@color/background"
+    android:background="@drawable/application_bg"
     android:layout_marginLeft="40dp"
     android:layout_margin="10dp"
     android:layout_marginRight="10dp">
