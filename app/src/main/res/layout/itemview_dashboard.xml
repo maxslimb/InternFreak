@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dashboard_cardview_1"
+        android:layout_width="356dp"
+        android:layout_height="167dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+
+        <EditText
+            android:id="@+id/company_name_output"
+            android:layout_width="226dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/Start_date_output"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="105dp" />
+
+        <EditText
+                android:id="@+id/Duration_output"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="105dp" />
+
+        <EditText
+            android:id="@+id/stipend_output"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="105dp" />
+
+        <EditText
+            android:layout_width="323dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="70dp"
+            android:text="  Start Date
+                               Duration                                           Stipend"
+            android:textColor="@color/black"
+            android:textSize="8dp" />
+
+        <ImageView
+            android:layout_width="122dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="230dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

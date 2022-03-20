@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.internfreak.EditProfile
 import com.example.internfreak.R
+import com.example.internfreak.SignInActivity
+import com.example.internfreak.databinding.FragmentProfileBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class Profile : Fragment() {
@@ -30,12 +34,8 @@ class Profile : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       /* val binding= FragmentProfileBinding.inflate(layoutInflater)
-        binding.btn_edit_profile.setOnClickListener{
-            val intent=Intent(this@Profile.requireContext(),EditProfile::class.java)
-            startActivity(intent)
 
-        }*/
+
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 

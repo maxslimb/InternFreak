@@ -15,10 +15,15 @@
         android:theme="@style/Theme.InternFreak">
         <activity
             android:name=".InternshipApplication"
+            android:name=".SplashScreen"
+            android:exported="false" />
+        <activity
+            android:name=".HostInternship"
             android:exported="false" />
         <activity
             android:name=".EditProfile"
-            android:exported="true" >
+            android:exported="true"/>
+
 
         </activity>
         <activity
@@ -33,11 +38,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
 

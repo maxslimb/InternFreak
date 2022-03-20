@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
-import com.example.internfreak.fragment.editprofiledata
+import com.example.internfreak.fragment.studentdata
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -89,7 +91,9 @@ class EditProfile : AppCompatActivity() {
 
 
         val database = Firebase.database.reference
-        val editprofiledata = editprofiledata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
+        val editprofiledata = studentdata(name_student,address_student,email_student,
+            mobile_no_student,Qname_of_college,Qyear_student,QDept_student,skills_student
+        )
         val data = editprofiledata.toMap()
 
         val editprofileupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/Profile_Student" to data)
