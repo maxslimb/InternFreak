@@ -17,10 +17,11 @@
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_nearby__internship.xml" value="0.16032608695652173" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_internship_application.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
