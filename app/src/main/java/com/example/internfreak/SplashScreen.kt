@@ -31,7 +31,7 @@ class SplashScreen : AppCompatActivity() {
                     startActivity(intent)
                 }
                 if(user1=="company"){
-                   // val intent = Intent(this, ::class.java)
+                    val intent = Intent(this, CompanyProfile::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                 }
