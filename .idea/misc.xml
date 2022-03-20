@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_company_details.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_internship_application.xml" value="0.33" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/fragment_dashboard.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/fragment_nearby__internship.xml" value="0.2" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.17083333333333334" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1625" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/drawable/ic_application.xml" value="0.134" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1625" />

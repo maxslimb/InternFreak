@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.internfreak">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InternFreak">
         <activity
+            android:name=".InternshipApplication"
             android:name=".SplashScreen"
             android:exported="false" />
         <activity
@@ -17,7 +22,10 @@
             android:exported="false" />
         <activity
             android:name=".EditProfile"
-            android:exported="true"></activity>
+            android:exported="true"/>
+
+
+        </activity>
         <activity
             android:name=".CompanyDetails"
             android:exported="false" />
@@ -25,10 +33,10 @@
             android:name=".StudentDetails"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".SignInActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
