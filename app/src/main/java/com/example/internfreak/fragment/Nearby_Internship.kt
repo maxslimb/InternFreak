@@ -1,6 +1,7 @@
 package com.example.internfreak.fragment
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +11,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.internfreak.Adapter.Connect_Adapter
+import com.example.internfreak.Adapter.NearbyAdapter
 import com.example.internfreak.R
+import com.example.internfreak.data.data1
+import com.example.internfreak.data.datanearby
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.database.DataSnapshot
@@ -31,6 +38,8 @@ class Nearby_Internship : Fragment() {
     private var param2: String? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var database: FirebaseDatabase
+    private lateinit var data: ArrayList<datanearby>
+    private lateinit var  recycler: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -38,6 +47,15 @@ class Nearby_Internship : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this.context)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+         data= arrayListOf()
+         recycler = view.findViewById(R.id.recylerview)
+        recycler.layoutManager = GridLayoutManager(view.context,2)
+
+        recycler.adapter = NearbyAdapter(data)
     }
 
     override fun onCreateView(
@@ -80,10 +98,14 @@ class Nearby_Internship : Fragment() {
                     Log.d("Maindebud","Location_lat: ${location.latitude}, " +
                             "Location_long: ${location.longitude}")
                     //19.048391 73.071286
+                    val lat_max = location.latitude +10.0
+                    val lat_min = location.latitude-10.0
+                    val long_max = location.longitude+10.0
+                    val long_min = location.longitude-10.0
                     Toast.makeText(requireView().context,"Location: $location",Toast.LENGTH_SHORT).show()
 
                     database = Firebase.database
-                    val query1 = database.reference.child("Users/")
+                    val query1 = database.reference.child("Company/Internships/")
                         .orderByChild("location_lat")
 
                     query1.addValueEventListener(object : ValueEventListener {
@@ -92,10 +114,21 @@ class Nearby_Internship : Fragment() {
                             Log.w("location", "Couldn't find any location")
                         }
 
+                        @SuppressLint("NotifyDataSetChanged")
                         override fun onDataChange(snapshot: DataSnapshot) {
-                            snapshot.children.forEach {
 
-                                Log.d("location","${it.child("location_lat")}")
+                            snapshot.children.forEach {
+                                Log.d("location","${it.value}")
+                                val long = it.child("location_long").value.toString().toDouble()
+                                val lat = it.child("location_lat").value.toString().toDouble()
+                                Log.d("location","${it.child("location_long").value}")
+                                if((lat<lat_max)&&(lat>lat_min)&&(long>long_min)&&(long<long_max)){
+                                    Log.d("data_selected","${it.value}")
+                                    it.getValue<datanearby>()?.let { it1 -> data.add(it1) }
+                                    recycler.adapter!!.notifyDataSetChanged()
+                                }
+
+
                                 Toast.makeText(view!!.context,"Found: ${it.value}",Toast.LENGTH_SHORT).show()
 
                                 query1.removeEventListener(this)
@@ -110,7 +143,7 @@ class Nearby_Internship : Fragment() {
 
             }
             .addOnFailureListener {
-                Log.d("Maindebud","Location error: ${it.toString()}")
+                Log.e("Maindebud","Location error: ${it.toString()}")
             }
 
     }
