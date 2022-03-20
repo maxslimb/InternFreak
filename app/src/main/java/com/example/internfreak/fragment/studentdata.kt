@@ -3,7 +3,7 @@ package com.example.internfreak.fragment
 
 import com.google.firebase.database.Exclude
 
-class editprofiledata(
+class studentdata(
     var name_student: String? = "",
     var email_student: String? = "",
     var address: String? = "",

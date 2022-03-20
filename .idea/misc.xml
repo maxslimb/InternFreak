@@ -21,6 +21,27 @@
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.16032608695652173" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/itemview_dashboard.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_btn_bg.xml" value="0.216" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_group_3__1_.xml" value="0.2555" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_profile_rect.xml" value="0.2335" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_rect_btn_edit_profile.xml" value="0.216" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_search.xml" value="0.2555" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_watercolor_blue_circle_make_up_artist_logo__3__1.xml" value="0.232" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_applications.xml" value="0.275" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_company_details.xml" value="0.2609375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/activity_student_details.xml" value="0.275" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/fragment_connect.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/fragment_dashboard.xml" value="0.275" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/fragment_nearby__internship.xml" value="0.2609375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/fragment_profile.xml" value="0.2609375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/item_applicationslist.xml" value="0.275" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/item_connect.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23703703703703705" />
       </map>
     </option>
   </component>

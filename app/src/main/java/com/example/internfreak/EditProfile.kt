@@ -6,8 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.TextView
-import com.example.internfreak.fragment.editprofiledata
+import android.widget.EditText
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
