@@ -9,7 +9,10 @@ class data_host_internship
      var openings: String?= "",
      var start_date: String?="",
      var duration: String?="",
-     var perks: String? = ""
+     var perks: String? = "",
+     var stipend: String? = "",
+     var location_lat: String? = "",
+     var location_long: String? = "",
 ) {
 
     @Exclude
@@ -21,7 +24,10 @@ class data_host_internship
             "Openings" to openings,
             "Start_Date" to start_date,
             "Duration" to duration,
-            "Perks" to perks
+            "Perks" to perks,
+            "Stipend" to stipend,
+            "Location_lat" to location_lat,
+            "Location_long" to location_long
         )
     }
 }

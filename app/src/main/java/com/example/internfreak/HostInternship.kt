@@ -23,6 +23,7 @@ class HostInternship : AppCompatActivity() {
         val duration = findViewById<TextInputEditText>(R.id.sduration)
         val perks = findViewById<TextInputEditText>(R.id.sperks)
         val post_button = findViewById<Button>(R.id.Post_application)
+        val stipend = findViewById<TextInputEditText>(R.id.sstipend)
 
 
         post_button.setOnClickListener {
@@ -32,7 +33,8 @@ class HostInternship : AppCompatActivity() {
                 openings.text.toString(),
                 start_date.text.toString(),
                 duration.text.toString(),
-                perks.text.toString())
+                perks.text.toString(),
+                stipend.text.toString())
 
         }
 
@@ -50,11 +52,12 @@ class HostInternship : AppCompatActivity() {
         start_date: String,
         duration: String,
         perks: String,
+        stipend :String
 
     ) {
 
         val database = Firebase.database.reference
-        val user_data = data_host_internship(job_role,description,company_name,openings,start_date,duration,perks)
+        val user_data = data_host_internship(job_role,description,company_name,openings,start_date,duration,perks,stipend)
         val data = user_data.toMap()
         val key  = database.push().key
         val userupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/Internships/$key" to data,

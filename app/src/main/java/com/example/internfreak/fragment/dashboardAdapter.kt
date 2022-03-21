@@ -6,19 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.internfreak.InternshipApplication
+import com.example.internfreak.InternshipDetails
 import com.example.internfreak.MainActivity
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
 import com.example.internfreak.data.data2
+import com.example.internfreak.data.data_host_internship
 
-class dashboardAdapter ( var dashboarddata:ArrayList<company_data>) : RecyclerView.Adapter<dashboardAdapter.ViewHolder>() {
+class dashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerView.Adapter<dashboardAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item =dashboarddata[position]
-        holder.Comapny_name.text = item.company_name.toString()
-        holder.Start_Date.text = item.start_date.toString()
-        holder.Duration.text = item.duration.toString()
-        holder.Stipend.text = item.stipend.toString()
+        holder.Comapny_name.text = item.Company_Name.toString()
+        holder.Start_Date.text = item.Start_Date.toString()
+        holder.Duration.text = item.Duration.toString()
+        holder.Stipend.text = item.Stipend.toString()
     }
 
     override fun getItemCount(): Int {
@@ -29,8 +32,22 @@ class dashboardAdapter ( var dashboarddata:ArrayList<company_data>) : RecyclerVi
         val view = LayoutInflater.from(parent.context).inflate(R.layout.itemview_dashboard,parent,false)
        val  holder  = ViewHolder(view)
         view.setOnClickListener {
-            val intent = Intent(parent.context,MainActivity::class.java)
+
+            val intent = Intent(parent.context,InternshipDetails::class.java)
+            intent.putExtra("Job_Role",dashboarddata[holder.adapterPosition].Job_Role)
+            intent.putExtra("Description",dashboarddata[holder.adapterPosition].Description)
+            intent.putExtra("Company_Name",dashboarddata[holder.adapterPosition].Company_Name)
+            intent.putExtra("Openings",dashboarddata[holder.adapterPosition].Openings)
+            intent.putExtra("Start_Date",dashboarddata[holder.adapterPosition].Start_Date)
+            intent.putExtra("Duration",dashboarddata[holder.adapterPosition].Duration)
+            intent.putExtra("Perks",dashboarddata[holder.adapterPosition].Perks)
+            intent.putExtra("Stipend",dashboarddata[holder.adapterPosition].Stipend)
+            intent.putExtra("Location_lat",dashboarddata[holder.adapterPosition].location_lat)
+            intent.putExtra("Location_long",dashboarddata[holder.adapterPosition].location_long)
             parent.context.startActivity(intent)
+
+
+
         }
 
         return holder
