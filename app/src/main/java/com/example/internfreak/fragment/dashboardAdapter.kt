@@ -44,6 +44,7 @@ class dashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerVie
             intent.putExtra("Stipend",dashboarddata[holder.adapterPosition].Stipend)
             intent.putExtra("Location_lat",dashboarddata[holder.adapterPosition].location_lat)
             intent.putExtra("Location_long",dashboarddata[holder.adapterPosition].location_long)
+            intent.putExtra("uid",dashboarddata[holder.adapterPosition].uid)
             parent.context.startActivity(intent)
 
 

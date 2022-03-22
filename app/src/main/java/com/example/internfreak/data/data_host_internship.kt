@@ -13,7 +13,9 @@ class data_host_internship
      var stipend: String? = "",
      var location_lat: String? = "",
      var location_long: String? = "",
-) {
+     var uid: String? = ""
+
+     ) {
 
     @Exclude
     fun toMap(): Map<String, Any?> {
@@ -27,7 +29,8 @@ class data_host_internship
             "Perks" to perks,
             "Stipend" to stipend,
             "Location_lat" to location_lat,
-            "Location_long" to location_long
+            "Location_long" to location_long,
+            "uid" to uid
         )
     }
 }

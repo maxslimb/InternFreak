@@ -7,7 +7,7 @@ data class company_data (val Job_Role: String,val Description:String,
                          val Openings:String,var Perks: String,
                          val Duration:String,var location_lat: String,
                          var location_long: String,
-
+                         val uid: String
 
 
                          )
@@ -15,7 +15,7 @@ data class company_data (val Job_Role: String,val Description:String,
 
 {
 
-    constructor():this("","","","","","","","","","")
+    constructor():this("","","","","","","","","","","")
     @Exclude
 
     fun toMap():Map<String,Any?> {
@@ -30,7 +30,8 @@ data class company_data (val Job_Role: String,val Description:String,
             "Perks" to Perks,
             "Stipend" to Stipend,
             "Location_lat" to location_lat,
-            "Location_long" to location_long
+            "Location_long" to location_long,
+            "uid" to uid
         )
     }
 

@@ -149,7 +149,7 @@ class CompanyDetails : AppCompatActivity() {
                             "Location_long: ${location.longitude}")
                     locationlat = location.latitude
                     locationlong= location.longitude
-
+                    val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
                     Toast.makeText(this@CompanyDetails,"Location: $location", Toast.LENGTH_SHORT).show()
 
 
@@ -179,11 +179,10 @@ class CompanyDetails : AppCompatActivity() {
 
 
         val database = Firebase.database.reference
-        val key = database.child("Users/${Firebase.auth.uid}/Profile_Company").push().key
-        val companydata = companydata(name_company,address_company,email_company,mobile_no_company,job_role_company,AboutUs_company)
+        val companydata = companydata(name_company,address_company,email_company,mobile_no_company,job_role_company,AboutUs_company,locationlat,locationlong)
         val data = companydata.toMap()
 
-        val editprofileupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/Profile_Company/$key" to data)
+        val editprofileupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/" to data)
         database.updateChildren(editprofileupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
