@@ -13,17 +13,20 @@ class CompanyProfile : AppCompatActivity() {
         setContentView(R.layout.activity_company_profile)
 
         val application=findViewById<Button>(R.id.btn_applications)
+        val button_host_app = findViewById<Button>(R.id.btn_host_internships)
+        button_host_app.setOnClickListener {
+            startActivity(Intent(this, HostInternship::class.java))
+        }
         application.setOnClickListener{
             startActivity(Intent(this, Applications_list::class.java))
-
-
         }
 
         val signout = findViewById<Button>(R.id.btn_signout)
         signout.setOnClickListener {
             Firebase.auth.signOut()
-            startActivity(Intent(this, SignInActivity::class.java))
-
+            val intent = Intent(this, SignInActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
         }
 
     }
