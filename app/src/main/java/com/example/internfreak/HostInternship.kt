@@ -61,8 +61,6 @@ class HostInternship : AppCompatActivity() {
                 lat,
             Firebase.auth.uid.toString())
 
-
-
         }
 
 

@@ -22,7 +22,8 @@ class data_application_internship
             "job_internships" to job_internships,
             "skills" to skills,
             "job_role" to job_role,
-            "linkcv" to linkcv
+            "linkcv" to linkcv,
+            "job_role" to job_role
         )
     }
 }
