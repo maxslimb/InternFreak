@@ -1,6 +1,7 @@
 package com.example.internfreak
 
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,7 +21,8 @@ class StudentDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_details)
-
+        val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        sharedPreferences.edit().putString("user","student").apply()
         val name_student = findViewById<TextInputEditText>(R.id.name_input)
         val address_student = findViewById<TextInputEditText>(R.id.address_input)
         val email_student = findViewById<TextInputEditText>(R.id.email_input)
