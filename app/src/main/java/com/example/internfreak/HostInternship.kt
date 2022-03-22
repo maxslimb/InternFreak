@@ -1,5 +1,6 @@
 package com.example.internfreak
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -60,6 +61,8 @@ class HostInternship : AppCompatActivity() {
                 lat,
             Firebase.auth.uid.toString())
 
+
+
         }
 
 
@@ -77,9 +80,9 @@ class HostInternship : AppCompatActivity() {
         duration: String,
         perks: String,
         stipend :String,
-        uid: String,
         location_lat:String,
-        location_long: String
+        location_long: String,
+        uid: String,
 
     ) {
 
@@ -92,6 +95,11 @@ class HostInternship : AppCompatActivity() {
         val userupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/Internships/$key" to data,
             "Company/Internships/$key" to data)
         database.updateChildren(userupdates)
+            .addOnSuccessListener {
+                val intent = Intent(this, CompanyProfile::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
 
     }
 }
