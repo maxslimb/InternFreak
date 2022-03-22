@@ -9,7 +9,9 @@ class companydata(
     var address_company: String? = "",
     var mobile_no_company: String? = "",
     var job_role_company: String? = "",
-    var AbouUs: String? = ""
+    var AboutUs: String? = "",
+    var location_lat : String? = "",
+    var location_long: String? = ""
 
 
 ) {
@@ -22,7 +24,9 @@ class companydata(
             "Address" to address_company,
             "Mobile No" to mobile_no_company,
             "Job Roles" to job_role_company,
-            "AboutUs" to AbouUs
+            "AboutUs" to AboutUs,
+            "location_lat" to location_lat,
+            "location_long" to location_long
 
         )
     }

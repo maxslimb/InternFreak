@@ -55,8 +55,7 @@ class EditProfile : AppCompatActivity() {
                 Qyear_student.setText(snapshot.child("Current Year").value.toString())
                 QDept_student.setText(snapshot.child("Department").value.toString())
                 skills_student.setText(snapshot.child("Skills").value.toString())
-
-
+                
             }
 
             override fun onCancelled(error: DatabaseError) {

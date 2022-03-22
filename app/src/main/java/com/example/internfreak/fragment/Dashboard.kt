@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
-import com.example.internfreak.data.data2
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,6 +63,7 @@ class Dashboard : Fragment() {
 
                 recycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, true)
                 recycler.adapter = dashboardAdapter(company_data)
+
             }
         })
     }
