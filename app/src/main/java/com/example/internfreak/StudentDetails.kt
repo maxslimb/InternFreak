@@ -40,26 +40,6 @@ class StudentDetails : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val database = Firebase.database.getReference("Users/${Firebase.auth.uid}")
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-
-                name_student.setText(snapshot.child("Name").value.toString())
-                address_student.setText(snapshot.child("Address").value.toString())
-                email_student.setText(snapshot.child("Email").value.toString())
-                mobile_no_student.setText(snapshot.child("Mobile No").value.toString())
-                Qname_of_college.setText(snapshot.child("College Name").value.toString())
-                Qyear_student.setText(snapshot.child("Current Year").value.toString())
-                QDept_student.setText(snapshot.child("Department").value.toString())
-                skills_student.setText(snapshot.child("Skills").value.toString())
-
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.e(ContentValues.TAG, error.toString())
-            }
-        })
 
         Submit_button_student.setOnClickListener {
 
