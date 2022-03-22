@@ -40,26 +40,7 @@ class StudentDetails : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val database = Firebase.database.getReference("Users/${Firebase.auth.uid}")
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
 
-                name_student.setText(snapshot.child("Name").value.toString())
-                address_student.setText(snapshot.child("Address").value.toString())
-                email_student.setText(snapshot.child("Email").value.toString())
-                mobile_no_student.setText(snapshot.child("Mobile No").value.toString())
-                Qname_of_college.setText(snapshot.child("College Name").value.toString())
-                Qyear_student.setText(snapshot.child("Current Year").value.toString())
-                QDept_student.setText(snapshot.child("Department").value.toString())
-                skills_student.setText(snapshot.child("Skills").value.toString())
-
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.e(ContentValues.TAG, error.toString())
-            }
-        })
 
         Submit_button_student.setOnClickListener {
 
@@ -91,7 +72,7 @@ class StudentDetails : AppCompatActivity() {
         val studentdata = studentdata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
         val data = studentdata.toMap()
 
-        val studentdataupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/Profile_Student" to data)
+        val studentdataupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/" to data)
         database.updateChildren(studentdataupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
