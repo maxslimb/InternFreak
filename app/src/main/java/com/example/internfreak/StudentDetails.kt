@@ -71,7 +71,7 @@ class StudentDetails : AppCompatActivity() {
         val studentdata = studentdata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
         val data = studentdata.toMap()
 
-        val studentdataupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/Profile_Student" to data)
+        val studentdataupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}" to data)
         database.updateChildren(studentdataupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
