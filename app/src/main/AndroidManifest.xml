@@ -17,6 +17,12 @@
             android:name=".InternshipDetails"
             android:exported="false" />
         <activity
+            android:name=".InternshipApplication"
+            android:exported="false" />
+        <activity
+            android:name=".Applications_list"
+            android:exported="false" />
+        <activity
             android:name=".CompanyProfile"
             android:exported="false" />
         <activity

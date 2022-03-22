@@ -7,12 +7,186 @@
     tools:context=".InternshipDetails">
 
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="335dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="49dp"
+        android:gravity="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tstart_date"
+        android:textSize="25dp"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|top"
+        android:text="Start Date"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tstart_date" />
+
+    <TextView
+        android:id="@+id/tduration"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:textSize="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|top"
+        android:text="Duration"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tstart_date"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/tduration" />
+
+    <TextView
+        android:id="@+id/tstipend"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|top"
+        android:text="Stipend"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@+id/tduration"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <TextView
+        android:id="@+id/stipend_tv"
+        android:layout_width="109dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/tstipend" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="132dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="About"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tduration" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="380dp"
+        android:layout_height="216dp"
+        android:textSize="15dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="34dp"
+        android:text="Perks"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/perks_certi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/perks_certi"
+        android:layout_width="143dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.283" />
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="37dp"
+        android:text="No of Openings"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/number_of_openings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/perks_certi"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/number_of_openings"
+        android:layout_width="143dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="48dp"
+        android:gravity="top"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
-        android:id="@+id/submit_button_internship"
+        android:id="@+id/apply_button_internship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="submit"
+        android:text="apply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,15 +18,27 @@ class InternshipApplication : AppCompatActivity() {
         val name = findViewById<TextInputEditText>(R.id.sname)
         val email= findViewById<TextInputEditText>(R.id.semail)
         val mobile=findViewById<TextInputEditText>(R.id.smobile)
-        val location= ""
         val education=findViewById<TextInputEditText>(R.id.seducation)
         val job_internships=findViewById<TextInputEditText>(R.id.sjob)
         val skills = findViewById<TextInputEditText>(R.id.sskills)
         val linkcv=findViewById<Button>(R.id.cv)
+        val job_role = intent.getStringExtra("Job_Role")
+
+
          uid = intent.getStringExtra("uid")!!
 
-        writedata(name.toString(),email.toString(),mobile.toString(),location.toString(),
-            education.toString(),job_internships.toString(),skills.toString(),linkcv.toString())
+        val submit_application_button = findViewById<Button>(R.id.Submit_application)
+        submit_application_button.setOnClickListener {
+
+
+            writedata(
+                name.text.toString(), email.text.toString(), mobile.text.toString(),
+                education.text.toString(), job_internships.text.toString(), skills.text.toString(),job_role.toString(),
+                linkcv.text.toString()
+            )
+
+
+        }
 
 
     }
@@ -35,18 +47,18 @@ class InternshipApplication : AppCompatActivity() {
         name: String,
         email: String,
         mobile: String,
-        location: String,
         education: String,
         jobInternships: String,
         skills: String,
+        job_role: String,
         linkcv: String
     ) {
         val database = Firebase.database.reference
-        val user_data = data_application_internship(name,email,mobile,location, education,jobInternships,skills,linkcv)
+        val user_data = data_application_internship(name,email,mobile, education,jobInternships,skills,job_role,linkcv)
         val data = user_data.toMap()
         val key  = database.push().key
-        val userupdates = hashMapOf<String, Any>("Company/Application/${uid}/$key/" to data,
-            "Users/Application/${Firebase.auth.uid}/$key/" to data)
+        val userupdates = hashMapOf<String, Any>("Company/Applications/${Firebase.auth.uid}/$key/" to data,
+            "Users/${Firebase.auth.uid}/Applications//$key/" to data)
         database.updateChildren(userupdates)
     }
 }
