@@ -31,7 +31,7 @@ class applications_list_Adapter(var dataapplications: List<data_application_inte
         val item=dataapplications[position]
 
 
-        holder.textView1.text=item.jobrole.toString()
+        holder.textView1.text=item.job_role.toString()
         holder.textView2.text=item.name.toString()
 
     }
