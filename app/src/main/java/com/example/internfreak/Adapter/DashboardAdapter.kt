@@ -1,4 +1,4 @@
-package com.example.internfreak.Adapter
+package com.example.internfreak.fragment
 
 import android.content.Intent
 import android.view.LayoutInflater

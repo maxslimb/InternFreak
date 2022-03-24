@@ -21,22 +21,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <EditText
+        <TextView
             android:id="@+id/company_name_output"
             android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:textSize="15dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/Start_date_output"
-            android:layout_width="100dp"
+            android:layout_width="98dp"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="105dp"
             android:gravity="center"
             android:textSize="10dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/Duration_output"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -45,7 +45,7 @@
             android:gravity="center"
             android:textSize="10dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/stipend_output"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -54,7 +54,7 @@
             android:gravity="center"
             android:textSize="10dp" />
 
-        <EditText
+        <TextView
             android:layout_width="323dp"
             android:layout_height="29dp"
             android:layout_marginTop="70dp"

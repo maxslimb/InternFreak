@@ -49,61 +49,49 @@
         app:layout_constraintVertical_bias="0.035" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/btn_edit_profile"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/myprofile_rect"
-        android:fontFamily="@font/nunito_sans_light"
-        android:text="Edit Profile"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+        android:src="@drawable/ic_btn_editprofile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/btn_connections"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
         android:background="@drawable/myprofile_rect"
-        android:fontFamily="@font/nunito_sans_light"
-        android:text="Connections"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+        android:src="@drawable/ic_btn_connections"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/btn_internships_applied"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
         android:background="@drawable/myprofile_rect"
-        android:fontFamily="@font/nunito_sans_light"
-        android:text="Internships Applied "
-        android:textColor="@color/white"
-        android:textSize="20dp"
+        android:src="@drawable/ic_btn_internship_applied"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/btn_signout"
-        android:layout_width="260dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="208dp"
         android:background="@drawable/myprofile_rect"
-        android:fontFamily="@font/nunito_sans_light"
-        android:text="SignOut"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+        android:src="@drawable/ic_btn_signout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

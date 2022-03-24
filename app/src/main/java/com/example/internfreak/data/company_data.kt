@@ -8,11 +8,7 @@ data class company_data (val Job_Role: String,val Description:String,
                          val Duration:String,var location_lat: String,
                          var location_long: String,
                          val uid: String
-
-
                          )
-
-
 {
 
     constructor():this("","","","","","","","","","","")

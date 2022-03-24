@@ -10,7 +10,10 @@ class data_application_internship
     var job_internships: String?="",
     var skills: String? = "",
      var job_role :String? = "",
-    var linkcv: String? ="")
+    var linkcv: String? ="",
+    var uid_student: String? ="",
+    var company_name: String? ="",
+     var status: String? ="")
 {
     @Exclude
     fun toMap(): Map<String, Any?> {
@@ -23,7 +26,9 @@ class data_application_internship
             "skills" to skills,
             "job_role" to job_role,
             "linkcv" to linkcv,
-            "job_role" to job_role
+            "Uid_student" to uid_student,
+            "company_name" to company_name,
+            "Status" to status
         )
     }
 }
