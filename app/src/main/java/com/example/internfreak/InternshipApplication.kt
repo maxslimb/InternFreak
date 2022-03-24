@@ -31,7 +31,7 @@ class InternshipApplication : AppCompatActivity() {
         val submit_application_button = findViewById<ImageButton>(R.id.Submit_application)
         submit_application_button.setOnClickListener {
 
-            
+
             val intent = Intent(this,InternshipApplication::class.java)
             startActivity(intent)
 
