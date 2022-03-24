@@ -13,7 +13,7 @@ class data_application_internship
     var linkcv: String? ="",
     var uid_student: String? ="",
     var company_name: String? ="",
-     var status: String? ="")
+     var status: String? ="Under Review")
 {
     @Exclude
     fun toMap(): Map<String, Any?> {

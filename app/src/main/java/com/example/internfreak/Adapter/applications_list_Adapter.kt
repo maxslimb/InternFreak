@@ -34,6 +34,8 @@ class applications_list_Adapter(var dataapplications: List<data_application_inte
             intent.putExtra("job_internships",dataapplications[holder.adapterPosition].job_internships)
             intent.putExtra("skills",dataapplications[holder.adapterPosition].skills)
             intent.putExtra("Job_Role",dataapplications[holder.adapterPosition].job_role)
+            intent.putExtra("uid_student",dataapplications[holder.adapterPosition].uid_student)
+            intent.putExtra("Company_Name",dataapplications[holder.adapterPosition].company_name)
             parent.context.startActivity(intent)
         }
 

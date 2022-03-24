@@ -33,10 +33,27 @@ class InternshipApplication : AppCompatActivity() {
         val job_internships=findViewById<TextInputEditText>(R.id.sjob)
         val skills = findViewById<TextInputEditText>(R.id.sskills)
         val linkcv=findViewById<Button>(R.id.cv)
-        val job_role = intent.getStringExtra("Job_Role")
-        val path = intent.getStringExtra("path")
         val submit_button = findViewById<ImageButton>(R.id.Submit_application)
         val apply_button = findViewById<ImageButton>(R.id.apply_application_btn)
+        val job_role = intent.getStringExtra("Job_Role")
+        val path = intent.getStringExtra("path")
+        val company_name = intent.getStringExtra("Company_Name")
+        val Name = intent.getStringExtra("name")
+        val Email = intent.getStringExtra("email")
+        val Mobile = intent.getStringExtra("mobile")
+        val Education = intent.getStringExtra("education")
+        val Job_internships = intent.getStringExtra("job_internships")
+        val Skills= intent.getStringExtra("skills")
+        val uid_student = intent.getStringExtra("uid_student")
+        name.setText(Name)
+        email.setText(Email)
+        mobile.setText(Mobile)
+        education.setText(Education)
+        job_internships.setText(Job_internships)
+        skills.setText(Skills)
+
+
+
 
         if(path == "applications_list_Adapter")
         {
@@ -45,15 +62,19 @@ class InternshipApplication : AppCompatActivity() {
         }
         if(path== "InternshipDetails")
         {
+            uid = intent?.getStringExtra("uid").toString()
             submit_button.visibility = View.VISIBLE
             apply_button.visibility = View.GONE
         }
 
-         uid = intent.getStringExtra("uid")!!
+
 
         apply_button.setOnClickListener {
+
+
+
             database = Firebase.database
-            val query1 = database.reference.child("Users/RzLXs3nMzscUDDRXU7Aav9zoL5T2/Applications/")
+            val query1 = database.reference.child("Users/FFM0wBfQF0fGIJQK3Z8IGSV7Oyj2/Applications/")  //Users/$uid_student/Applications/
                 .orderByChild("Name")
 
             query1.addValueEventListener(object : ValueEventListener {
@@ -67,6 +88,14 @@ class InternshipApplication : AppCompatActivity() {
 
                     snapshot.children.forEach {
                         Log.d("RzLXs3nMzscUDDRXU7Aav9zoL5T2","${it.value}")
+                       if ((it.child("company_name").value==company_name)&&(it.child("job_role").value==job_role)){
+                           database.reference.child("Users/FFM0wBfQF0fGIJQK3Z8IGSV7Oyj2/Applications/${it.key}/Status").setValue("Approved")
+                           query1.removeEventListener(this)
+                           Toast.makeText(this@InternshipApplication,"Approved Successfully",Toast.LENGTH_SHORT).show()
+                           val intent = Intent(this@InternshipApplication, CompanyProfile::class.java)
+                           intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                           startActivity(intent)
+                       }
                         query1.removeEventListener(this)
                     }
                 }
@@ -77,7 +106,7 @@ class InternshipApplication : AppCompatActivity() {
             writedata(
                 name.text.toString(), email.text.toString(), mobile.text.toString(),
                 education.text.toString(), job_internships.text.toString(), skills.text.toString(),job_role.toString(),
-                linkcv.text.toString()
+                linkcv.text.toString(),company_name!!
             )
         }
 
@@ -92,10 +121,11 @@ class InternshipApplication : AppCompatActivity() {
         jobInternships: String,
         skills: String,
         job_role: String,
-        linkcv: String
+        linkcv: String,
+        company_name: String
     ) {
         val database = Firebase.database.reference
-        val user_data = data_application_internship(name,email,mobile, education,jobInternships,skills,job_role,linkcv)
+        val user_data = data_application_internship(name,email,mobile, education,jobInternships,skills,job_role,linkcv,Firebase.auth.uid,company_name)
         val data = user_data.toMap()
         val key  = database.push().key
         val userupdates = hashMapOf<String, Any>("Company/Applications/${uid}/$key/" to data,
