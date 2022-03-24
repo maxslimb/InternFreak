@@ -6,10 +6,10 @@ class data_application_internship
     (var name: String? = "",
     var email: String? = "",
     var mobile: String?="",
-    var location: String?= "",
     var education: String?="",
     var job_internships: String?="",
     var skills: String? = "",
+     var job_role :String? = "",
     var linkcv: String? ="")
 {
     @Exclude
@@ -18,11 +18,12 @@ class data_application_internship
             "name" to name,
             "email" to email,
             "mobile" to mobile,
-            "location" to location,
             "education" to education,
             "job_internships" to job_internships,
             "skills" to skills,
-            "linkcv" to linkcv
+            "job_role" to job_role,
+            "linkcv" to linkcv,
+            "job_role" to job_role
         )
     }
 }

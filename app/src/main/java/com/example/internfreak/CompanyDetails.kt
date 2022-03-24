@@ -65,23 +65,6 @@ class CompanyDetails : AppCompatActivity() {
         }
 
 
-        val database = Firebase.database.getReference("Users/${Firebase.auth.uid}")
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-
-                name_company.setText(snapshot.child("Name").value.toString())
-                address_company.setText(snapshot.child("Address").value.toString())
-                email_company.setText(snapshot.child("Email").value.toString())
-                mobile_no_company.setText(snapshot.child("Mobile No").value.toString())
-                job_role_company.setText(snapshot.child("Job Role").value.toString())
-                AboutUs_company.setText(snapshot.child("About US").value.toString())
-            }
-
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.e(ContentValues.TAG, error.toString())
-            }
-        })
 
         Submit_button_company.setOnClickListener {
 
@@ -185,7 +168,7 @@ class CompanyDetails : AppCompatActivity() {
         val editprofileupdates = hashMapOf<String, Any>("Company/${Firebase.auth.uid}/" to data)
         database.updateChildren(editprofileupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this,CompanyProfile::class.java))
 
         }
     }
