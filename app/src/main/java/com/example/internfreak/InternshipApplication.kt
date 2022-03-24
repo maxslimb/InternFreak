@@ -3,6 +3,7 @@ package com.example.internfreak
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.internfreak.data.data_application_internship
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.ktx.auth
@@ -27,7 +28,7 @@ class InternshipApplication : AppCompatActivity() {
 
          uid = intent.getStringExtra("uid")!!
 
-        val submit_application_button = findViewById<Button>(R.id.Submit_application)
+        val submit_application_button = findViewById<ImageButton>(R.id.Submit_application)
         submit_application_button.setOnClickListener {
 
 

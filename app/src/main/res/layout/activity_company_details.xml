@@ -143,6 +143,7 @@
             android:layout_height="wrap_content"
             android:hint="Job Roles"
             android:padding="10dp"
+            android:gravity="center"
             android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -184,22 +185,19 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-    </LinearLayout>
-    </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Submit_company"
+            android:layout_width="277dp"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_submit_bg"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Submit_company"
-        android:layout_width="219dp"
-        android:layout_height="43dp"
-        android:background="@drawable/btn_submit_bg"
-        android:text="Submit"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-    <TextView
+        <TextView
         android:id="@+id/Gotostudent_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -231,7 +229,8 @@
             android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

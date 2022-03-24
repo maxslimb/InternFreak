@@ -11,7 +11,7 @@ class InternshipDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_internship_details)
-        val submit_button = findViewById<Button>(R.id.apply_button_internship)
+        val submit_button = findViewById<Button>(R.id.apply_button_internship_details)
         val uid = intent.getStringExtra("uid")
         val Job_Role = intent.getStringExtra("Job_Role")
         val Description = intent.getStringExtra("Description")
