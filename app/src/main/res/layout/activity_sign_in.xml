@@ -52,15 +52,17 @@ Start your journey today!"
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_sign_in"
-        android:layout_width="371dp"
-        android:layout_height="64dp"
+        android:layout_width="231dp"
+        android:layout_height="57dp"
         android:layout_marginStart="16dp"
+        android:foregroundGravity="center"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="0.924" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

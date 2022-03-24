@@ -13,8 +13,11 @@
         android:layout_marginTop="16dp"
         android:text="Host Internship"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="22sp"
         android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentTop="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,22 +27,23 @@
         android:id="@+id/internship_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:text="Internship-Details"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Host_Intern" />
+        app:layout_constraintTop_toBottomOf="@id/Host_Intern"
+        android:visibility="invisible"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/job_role"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="25dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -48,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/internship_details"
         app:layout_constraintStart_toStartOf="parent"
+
         tools:ignore="MissingClass">
 
 
@@ -55,20 +60,22 @@
             android:id="@+id/sjob_role"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
             android:hint="Job Role"
             android:importantForAutofill="auto"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:padding="15dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -83,18 +90,20 @@
             android:layout_width="match_parent"
             android:id="@+id/sdescription"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/search_bg"
             android:hint="Description" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/company_name_host"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -109,17 +118,19 @@
             android:id="@+id/scompany_name_host"
             android:layout_height="wrap_content"
             android:hint="Company Name"
+            android:background="@drawable/search_bg"
+            android:padding="10dp"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/openings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -134,18 +145,20 @@
             android:id="@+id/sopenings"
             android:layout_height="wrap_content"
             android:hint="Openings"
+            android:padding="15dp"
+            android:background="@drawable/search_bg"
             android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/start_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -160,18 +173,20 @@
             android:id="@+id/sstart_date"
             android:layout_height="wrap_content"
             android:hint="Start Date"
+            android:background="@drawable/search_bg"
+            android:padding="15dp"
             android:inputType="date"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/duration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -186,17 +201,19 @@
             android:id="@+id/sduration"
             android:layout_height="wrap_content"
             android:hint="Duration"
+            android:background="@drawable/search_bg"
+            android:padding="15dp"
             android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/perks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -210,17 +227,19 @@
             android:layout_width="match_parent"
             android:id="@+id/sperks"
             android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
+            android:padding="15dp"
             android:hint="Perks" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/stipend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -233,22 +252,27 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:id="@+id/sstipend"
+            android:padding="15dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
             android:hint="Stipend" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+
+    <ImageButton
         android:id="@+id/Post_application"
+        android:src="@drawable/ic_postbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Post"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perks" />
-
+        app:layout_constraintTop_toBottomOf="@+id/perks"
+        app:layout_constraintVertical_bias="0.8"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
