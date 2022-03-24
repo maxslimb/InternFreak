@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.internfreak.data.data_application_internship
 import com.example.internfreak.data.data_host_internship
 import com.google.android.material.textfield.TextInputEditText
@@ -28,7 +29,7 @@ class HostInternship : AppCompatActivity() {
         val start_date = findViewById<TextInputEditText>(R.id.sstart_date)
         val duration = findViewById<TextInputEditText>(R.id.sduration)
         val perks = findViewById<TextInputEditText>(R.id.sperks)
-        val post_button = findViewById<Button>(R.id.Post_application)
+        val post_button = findViewById<ImageButton>(R.id.Post_application)
         val stipend = findViewById<TextInputEditText>(R.id.sstipend)
 
         val database = Firebase.database

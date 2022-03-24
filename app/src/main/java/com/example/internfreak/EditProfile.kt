@@ -36,12 +36,7 @@ class EditProfile : AppCompatActivity() {
         val skills_student = findViewById<TextInputEditText>(R.id.Skills_input)
 
         val Submit_button_student = findViewById<Button>(R.id.Submit_student)
-        val Gotocompany_text = findViewById<TextView>(R.id.gotocompany_textview)
 
-        Gotocompany_text.setOnClickListener {
-            val intent = Intent(this,CompanyDetails::class.java)
-            startActivity(intent)
-        }
 
         val database = Firebase.database.getReference("Users/${Firebase.auth.uid}")
         database.addValueEventListener(object : ValueEventListener {

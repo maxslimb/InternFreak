@@ -33,12 +33,7 @@ class StudentDetails : AppCompatActivity() {
         val skills_student = findViewById<TextInputEditText>(R.id.Skills_input)
 
         val Submit_button_student = findViewById<Button>(R.id.Submit_student)
-        val Gotocompany_text = findViewById<TextView>(R.id.gotocompany_textview)
 
-        Gotocompany_text.setOnClickListener {
-            val intent = Intent(this,CompanyDetails::class.java)
-            startActivity(intent)
-        }
 
 
 
@@ -69,8 +64,8 @@ class StudentDetails : AppCompatActivity() {
 
 
         val database = Firebase.database.reference
-        val studentdata = studentdata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
-        val data = studentdata.toMap()
+        val studentdata1 = studentdata(name_student,address_student,email_student,mobile_no_student,Qname_of_college,QDept_student,Qyear_student,skills_student)
+        val data = studentdata1.toMap()
 
         val studentdataupdates = hashMapOf<String, Any>("Users/${Firebase.auth.uid}/" to data)
         database.updateChildren(studentdataupdates).addOnSuccessListener {

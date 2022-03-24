@@ -248,18 +248,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/scrollView2"
                 android:layout_marginTop="20dp"/>
 
-            <TextView
-                android:id="@+id/gotocompany_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Want to host internships? \n
-                Click here to Continue as a company"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_gravity="center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Submit_student"
-                android:textColor="@color/white"
-                android:gravity="center"/>
+<!--            <TextView-->
+<!--                android:id="@+id/gotocompany_textview"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Want to host internships? \n-->
+<!--                Click here to Continue as a company"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_gravity="center"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/Submit_student"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:gravity="center"/>-->
         </LinearLayout>
     </ScrollView>
 

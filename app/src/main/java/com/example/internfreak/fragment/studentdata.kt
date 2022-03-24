@@ -19,7 +19,7 @@ class studentdata(
     @Exclude
     fun toMap(): Map<String, Any?> {
         return mapOf(
-            "Name " to name_student,
+            "Name" to name_student,
             "Email" to email_student,
             "Address" to address,
             "Mobile No" to mobile_no_student,
