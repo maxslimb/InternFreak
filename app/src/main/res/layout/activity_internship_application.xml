@@ -20,9 +20,10 @@
         android:id="@+id/personal_details_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="28dp"
         android:src="@drawable/ic_personal_details_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -33,7 +34,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -52,6 +53,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/search_bg"
             android:hint="Name"
+            android:padding="15dp"
             android:importantForAutofill="auto"
             android:inputType="textPersonName" />
 
@@ -64,7 +66,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -81,7 +83,8 @@
             android:layout_height="match_parent"
             android:background="@drawable/search_bg"
             android:hint="Email Address"
-            android:inputType="textWebEmailAddress" />
+            android:inputType="textWebEmailAddress"
+            android:padding="15dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +92,7 @@
     android:id="@+id/mobile"
     android:layout_width="350dp"
     android:layout_height="53dp"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="10dp" app:boxBackgroundMode="outline"
     android:layout_marginStart="25dp"
     android:layout_marginEnd="25dp"
     app:boxCornerRadiusBottomEnd="30dp"
@@ -104,6 +107,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:id="@+id/smobile"
+        android:padding="15dp"
         android:background="@drawable/search_bg"
         android:layout_height="wrap_content"
         android:hint="Mobile"
@@ -117,6 +121,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -127,12 +132,12 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/seducation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/search_bg"
             android:hint="Education"
-            android:inputType="date" />
+            android:padding="15dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -142,7 +147,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -157,7 +162,8 @@
             android:id="@+id/sjob"
             android:background="@drawable/search_bg"
             android:layout_height="wrap_content"
-            android:hint="Job/Internship" />
+            android:hint="Job/Internship"
+            android:padding="15dp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -168,7 +174,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -183,6 +189,7 @@
             android:id="@+id/sskills"
             android:layout_height="wrap_content"
             android:background="@drawable/search_bg"
+            android:padding="15dp"
             android:hint="Skills" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -190,28 +197,29 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cv"
-        android:layout_width="106dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:background="@drawable/applynow_bg"
         android:text="Attach CV"
+        android:visibility="gone"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/skills" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/Submit_application"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Submit"
-        android:background="@drawable/applynow_bg"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_submitbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.71" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
