@@ -2,6 +2,7 @@ package com.example.internfreak
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import com.example.internfreak.data.data_application_internship
@@ -24,7 +25,20 @@ class InternshipApplication : AppCompatActivity() {
         val skills = findViewById<TextInputEditText>(R.id.sskills)
         val linkcv=findViewById<Button>(R.id.cv)
         val job_role = intent.getStringExtra("Job_Role")
+        val path = intent.getStringExtra("path")
+        val submit_button = findViewById<ImageButton>(R.id.Submit_application)
+        val apply_button = findViewById<ImageButton>(R.id.apply_application_btn)
 
+        if(path == "applications_list_Adapter")
+        {
+            submit_button.visibility = View.GONE
+            apply_button.visibility = View.VISIBLE
+        }
+        if(path== "InternshipDetails")
+        {
+            submit_button.visibility = View.VISIBLE
+            apply_button.visibility = View.GONE
+        }
 
          uid = intent.getStringExtra("uid")!!
 

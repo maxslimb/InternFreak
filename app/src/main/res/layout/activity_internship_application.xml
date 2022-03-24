@@ -222,4 +222,18 @@
         app:layout_constraintTop_toBottomOf="@+id/cv"
         app:layout_constraintVertical_bias="0.71" />
 
+    <ImageButton
+        android:id="@+id/apply_application_btn"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_group_9"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv"
+        app:layout_constraintVertical_bias="0.71" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

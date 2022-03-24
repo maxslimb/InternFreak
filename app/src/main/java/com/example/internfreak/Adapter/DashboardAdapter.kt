@@ -42,10 +42,7 @@ class DashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerVie
             intent.putExtra("Location_long",dashboarddata[holder.adapterPosition].location_long)
             intent.putExtra("uid",dashboarddata[holder.adapterPosition].uid)
             parent.context.startActivity(intent)
-
-
-
-        }
+ }
 
         return holder
     }
