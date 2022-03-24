@@ -30,15 +30,11 @@ class InternshipApplication : AppCompatActivity() {
 
         val submit_application_button = findViewById<ImageButton>(R.id.Submit_application)
         submit_application_button.setOnClickListener {
-
-
             writedata(
                 name.text.toString(), email.text.toString(), mobile.text.toString(),
                 education.text.toString(), job_internships.text.toString(), skills.text.toString(),job_role.toString(),
                 linkcv.text.toString()
             )
-
-
         }
 
 
