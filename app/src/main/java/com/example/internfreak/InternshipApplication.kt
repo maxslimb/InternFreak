@@ -74,7 +74,7 @@ class InternshipApplication : AppCompatActivity() {
 
 
             database = Firebase.database
-            val query1 = database.reference.child("Users/FFM0wBfQF0fGIJQK3Z8IGSV7Oyj2/Applications/")  //Users/$uid_student/Applications/
+            val query1 = database.reference.child("Users/$uid_student/Applications/")
                 .orderByChild("Name")
 
             query1.addValueEventListener(object : ValueEventListener {
@@ -89,7 +89,7 @@ class InternshipApplication : AppCompatActivity() {
                     snapshot.children.forEach {
                         Log.d("RzLXs3nMzscUDDRXU7Aav9zoL5T2","${it.value}")
                        if ((it.child("company_name").value==company_name)&&(it.child("job_role").value==job_role)){
-                           database.reference.child("Users/FFM0wBfQF0fGIJQK3Z8IGSV7Oyj2/Applications/${it.key}/Status").setValue("Approved")
+                           database.reference.child("Users/$uid_student/Applications/${it.key}/Status").setValue("Approved")
                            query1.removeEventListener(this)
                            Toast.makeText(this@InternshipApplication,"Approved Successfully",Toast.LENGTH_SHORT).show()
                            val intent = Intent(this@InternshipApplication, CompanyProfile::class.java)
@@ -125,7 +125,7 @@ class InternshipApplication : AppCompatActivity() {
         company_name: String
     ) {
         val database = Firebase.database.reference
-        val user_data = data_application_internship(name,email,mobile, education,jobInternships,skills,job_role,linkcv,Firebase.auth.uid,company_name)
+        val user_data = data_application_internship(name,email,mobile, education,jobInternships,skills,job_role,linkcv,Firebase.auth.uid,company_name,"Under Review")
         val data = user_data.toMap()
         val key  = database.push().key
         val userupdates = hashMapOf<String, Any>("Company/Applications/${uid}/$key/" to data,

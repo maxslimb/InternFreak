@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Internshiips Applied"
+        android:text="Internships Applied"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/internships_applied_rv"
         app:layout_constraintEnd_toEndOf="parent"
