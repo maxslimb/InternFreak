@@ -25,7 +25,6 @@ class InternshipApplication : AppCompatActivity() {
         val linkcv=findViewById<Button>(R.id.cv)
         val job_role = intent.getStringExtra("Job_Role")
 
-
          uid = intent.getStringExtra("uid")!!
 
         val submit_application_button = findViewById<ImageButton>(R.id.Submit_application)

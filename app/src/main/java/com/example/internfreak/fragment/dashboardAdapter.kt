@@ -47,8 +47,6 @@ class dashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerVie
             intent.putExtra("uid",dashboarddata[holder.adapterPosition].uid)
             parent.context.startActivity(intent)
 
-
-
         }
 
         return holder

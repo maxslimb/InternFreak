@@ -59,11 +59,6 @@ class InternshipDetails : AppCompatActivity() {
 
             startActivity(intent)
 
-
-
-
-
-
         }
     }
 }
