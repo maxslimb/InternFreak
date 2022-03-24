@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.internfreak.Adapter.DashboardAdapter
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
 import com.google.firebase.database.*
@@ -62,7 +63,7 @@ class Dashboard : Fragment() {
                 val recycler = view.findViewById<RecyclerView>(R.id.Dashbboard_rv)
 
                 recycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, true)
-                recycler.adapter = dashboardAdapter(company_data)
+                recycler.adapter = DashboardAdapter(company_data)
 
             }
         })
