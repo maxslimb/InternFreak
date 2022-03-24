@@ -152,12 +152,13 @@
         app:layout_constraintVertical_bias="0.283" />
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="143dp"
         android:layout_height="30dp"
         android:layout_marginTop="37dp"
         android:text="No of Openings"
-        android:textSize="15dp"
         android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/number_of_openings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
@@ -179,14 +180,19 @@
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/apply_button_internship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="apply"
+        android:background="@drawable/applynow_bg"
+        android:text="submit"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

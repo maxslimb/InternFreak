@@ -7,50 +7,52 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/dashboard_cardview_1"
-        android:layout_width="356dp"
-        android:layout_height="167dp"
+        android:layout_width="365dp"
+        android:layout_height="174dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/dashboardcard_bg"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/company_name_output"
             android:layout_width="226dp"
-            android:textSize="15dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="15dp" />
 
         <EditText
             android:id="@+id/Start_date_output"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:textSize="10dp"
-            android:gravity="center"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="105dp" />
+            android:layout_marginTop="105dp"
+            android:gravity="center"
+            android:textSize="10dp" />
 
         <EditText
-                android:id="@+id/Duration_output"
+            android:id="@+id/Duration_output"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:textSize="10dp"
-            android:gravity="center"
             android:layout_marginLeft="110dp"
-            android:layout_marginTop="105dp" />
+            android:layout_marginTop="105dp"
+            android:gravity="center"
+            android:textSize="10dp" />
 
         <EditText
             android:id="@+id/stipend_output"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:textSize="10dp"
-            android:gravity="center"
             android:layout_marginLeft="215dp"
-            android:layout_marginTop="105dp" />
+            android:layout_marginTop="105dp"
+            android:gravity="center"
+            android:textSize="10dp" />
 
         <EditText
             android:layout_width="323dp"

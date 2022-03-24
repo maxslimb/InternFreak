@@ -52,8 +52,8 @@ Start your journey today!"
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_sign_in"
-        android:layout_width="372dp"
-        android:layout_height="98dp"
+        android:layout_width="371dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

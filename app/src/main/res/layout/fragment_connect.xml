@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_sans_bold"
-        android:padding="20dp"
+        android:padding="22dp"
         android:text="Connect"
         android:textColor="@color/black"
         android:textSize="32dp"

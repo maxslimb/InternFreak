@@ -28,18 +28,15 @@
         />
 
 
-
-
-
     <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="299dp"
+        android:layout_height="46dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/search_bg"
         android:contextClickable="true"
-        android:outlineSpotShadowColor="@color/black"
-        android:background="@color/grey"
-        android:layout_marginRight="50dp"/>
+        android:outlineSpotShadowColor="@color/black" />
     
 
 
