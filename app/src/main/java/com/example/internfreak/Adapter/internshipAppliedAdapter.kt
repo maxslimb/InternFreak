@@ -7,16 +7,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
+import com.example.internfreak.data.data_application_internship
 import com.example.internfreak.data.intern_applied_data
 import com.example.internfreak.fragment.dashboardAdapter
 
-class internshipAppliedAdapter (var internapplieddata: ArrayList<intern_applied_data>)  : RecyclerView.Adapter<internshipAppliedAdapter.ViewHolder>() {
+class internshipAppliedAdapter (var internapplieddata: ArrayList<data_application_internship>)  : RecyclerView.Adapter<internshipAppliedAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): internshipAppliedAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.itemview_application_applied, parent, false)
         val holder = internshipAppliedAdapter.ViewHolder(view)
+        return holder
 
     }
 
@@ -29,9 +31,9 @@ class internshipAppliedAdapter (var internapplieddata: ArrayList<intern_applied_
 
     override fun onBindViewHolder(holder: internshipAppliedAdapter.ViewHolder, position: Int) {
         val item =internapplieddata[position]
-        holder.Name_of_Company_applicant.text = item.Name_applicant.toString()
+        holder.Job_Role_applicant.text=item.job_role
+        holder.Name_of_Company_applicant.text = item.company_name.toString()
         holder.status_applicant.text = item.status.toString()
-
 
     }
 
