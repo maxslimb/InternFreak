@@ -38,8 +38,8 @@ import kotlin.properties.Delegates
 
 class CompanyDetails : AppCompatActivity() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private var locationlat by Delegates.notNull<Double>()
-    private var locationlong by Delegates.notNull<Double>()
+    private var locationlat = 0.0
+    private var locationlong = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_details)

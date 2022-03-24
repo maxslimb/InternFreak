@@ -14,7 +14,6 @@
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_home_page.xml" value="0.15" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_host_internship.xml" value="0.25" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_internship_application.xml" value="0.25" />
-        <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_internship_applied.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_internship_details.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
@@ -27,11 +26,9 @@
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/item_applicationslist.xml" value="0.14628623188405798" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.67" />
-        <entry key="..\:/Android/InternFreak/app/src/main/res/layout/itemview_application_applied.xml" value="0.2" />
         <entry key="..\:/Android/InternFreak/app/src/main/res/layout/itemview_dashboard.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_btn_bg.xml" value="0.216" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_group_32.xml" value="0.1925" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_group_3__1_.xml" value="0.2555" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_profile_rect.xml" value="0.2335" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/drawable/ic_rect_btn_edit_profile.xml" value="0.216" />
@@ -52,15 +49,21 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/item_applicationslist.xml" value="0.275" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/layout/item_connect.xml" value="0.2" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/intern/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23703703703703705" />
-        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_company_details.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_company_details.xml" value="0.22" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_company_profile.xml" value="0.25" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_internship_application.xml" value="0.33" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_internship_applied.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_internship_details.xml" value="0.11005434782608696" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/activity_student_details.xml" value="0.18" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/fragment_dashboard.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/fragment_nearby__internship.xml" value="0.2" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/item_applicationslist.xml" value="0.25" />
         <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/item_connect.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/itemview_application_applied.xml" value="0.21" />
+        <entry key="..\:/Users/kpate/AndroidStudioProjects/InternFreak/app/src/main/res/layout/itemview_dashboard.xml" value="0.33" />
       </map>
     </option>
   </component>

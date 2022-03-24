@@ -7,11 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/dashboard_cardview_1"
-        android:layout_width="365dp"
+        android:layout_width="wrap_content"
         android:layout_height="174dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_margin="20dp"
         android:background="@drawable/dashboardcard_bg"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"

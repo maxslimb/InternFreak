@@ -6,15 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.internfreak.InternshipApplication
 import com.example.internfreak.InternshipDetails
-import com.example.internfreak.MainActivity
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
-import com.example.internfreak.data.data2
-import com.example.internfreak.data.data_host_internship
 
-class dashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerView.Adapter<dashboardAdapter.ViewHolder>() {
+class DashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerView.Adapter<DashboardAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item =dashboarddata[position]
@@ -46,8 +42,7 @@ class dashboardAdapter(var dashboarddata: ArrayList<company_data>) : RecyclerVie
             intent.putExtra("Location_long",dashboarddata[holder.adapterPosition].location_long)
             intent.putExtra("uid",dashboarddata[holder.adapterPosition].uid)
             parent.context.startActivity(intent)
-
-        }
+ }
 
         return holder
     }

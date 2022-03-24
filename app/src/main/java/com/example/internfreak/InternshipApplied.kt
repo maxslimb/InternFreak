@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.Adapter.internshipAppliedAdapter
 import com.example.internfreak.data.company_data
 import com.example.internfreak.data.data_application_internship
-import com.example.internfreak.fragment.dashboardAdapter
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
@@ -25,7 +24,7 @@ class InternshipApplied : AppCompatActivity() {
         setContentView(R.layout.activity_internship_applied)
 
 
-        database = FirebaseDatabase.getInstance().getReference("User/${Firebase.auth.uid}/Applications")
+        database = FirebaseDatabase.getInstance().getReference("Users/${Firebase.auth.uid}/Applications")
         val applicationdata = arrayListOf<data_application_internship>()
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -45,7 +44,7 @@ class InternshipApplied : AppCompatActivity() {
                 }
                 val recycler =findViewById<RecyclerView>(R.id.internships_applied_rv)
 
-                recycler.layoutManager = LinearLayoutManager(this@InternshipApplied, LinearLayoutManager.VERTICAL, true)
+                recycler.layoutManager = LinearLayoutManager(this@InternshipApplied, LinearLayoutManager.VERTICAL, false)
                 recycler.adapter = internshipAppliedAdapter(applicationdata)
 
             }

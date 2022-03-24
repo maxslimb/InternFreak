@@ -62,7 +62,7 @@ class Dashboard : Fragment() {
                 val recycler = view.findViewById<RecyclerView>(R.id.Dashbboard_rv)
 
                 recycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, true)
-                recycler.adapter = dashboardAdapter(company_data)
+                recycler.adapter = DashboardAdapter(company_data)
 
             }
         })

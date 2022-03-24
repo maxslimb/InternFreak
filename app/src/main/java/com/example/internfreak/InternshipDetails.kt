@@ -45,7 +45,7 @@ class InternshipDetails : AppCompatActivity() {
         submit_button.setOnClickListener {
             val intent = Intent(this,InternshipApplication::class.java)
             intent.putExtra("uid",uid)
-
+            intent.putExtra("path","InternshipDetails")
             intent.putExtra("Job_Role",Job_Role)
             intent.putExtra("Description",Description)
             intent.putExtra("Company_Name",Company_Name)

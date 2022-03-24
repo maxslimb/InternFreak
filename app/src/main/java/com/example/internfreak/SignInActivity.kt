@@ -1,5 +1,6 @@
 package com.example.internfreak
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -78,9 +79,18 @@ class SignInActivity : AppCompatActivity() {
 
                     }
                     else {
-                        val intent = Intent(this,MainActivity::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
-                        startActivity(intent)
+                        val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+                        val user1 =  sharedPreferences.getString("user","student")
+                        if(user1=="student") {
+                            val intent = Intent(this, MainActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            startActivity(intent)
+                        }
+                        if(user1=="company"){
+                            val intent = Intent(this, CompanyProfile::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            startActivity(intent)
+                        }
                     }
 
 
