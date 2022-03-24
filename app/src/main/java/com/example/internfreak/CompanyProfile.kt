@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -12,8 +13,8 @@ class CompanyProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_profile)
 
-        val application=findViewById<Button>(R.id.btn_applications)
-        val button_host_app = findViewById<Button>(R.id.btn_host_internships)
+        val application=findViewById<ImageButton>(R.id.btn_applications)
+        val button_host_app = findViewById<ImageButton>(R.id.btn_host_internships)
         button_host_app.setOnClickListener {
             startActivity(Intent(this, HostInternship::class.java))
         }
@@ -21,7 +22,7 @@ class CompanyProfile : AppCompatActivity() {
             startActivity(Intent(this, Applications_list::class.java))
         }
 
-        val signout = findViewById<Button>(R.id.btn_signout)
+        val signout = findViewById<ImageButton>(R.id.btn_signout)
         signout.setOnClickListener {
             Firebase.auth.signOut()
             val intent = Intent(this, SignInActivity::class.java)

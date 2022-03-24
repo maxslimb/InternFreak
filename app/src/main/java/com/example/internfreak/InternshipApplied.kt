@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.Adapter.internshipAppliedAdapter
 import com.example.internfreak.data.company_data
 import com.example.internfreak.data.data_application_internship
-import com.example.internfreak.fragment.dashboardAdapter
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue

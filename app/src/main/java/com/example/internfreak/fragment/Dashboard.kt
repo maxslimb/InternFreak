@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.internfreak.Adapter.DashboardAdapter
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
 import com.google.firebase.database.*

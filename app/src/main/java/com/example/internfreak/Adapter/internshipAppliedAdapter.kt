@@ -6,10 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.R
-import com.example.internfreak.data.company_data
 import com.example.internfreak.data.data_application_internship
-import com.example.internfreak.data.intern_applied_data
-import com.example.internfreak.fragment.dashboardAdapter
 
 class internshipAppliedAdapter (var internapplieddata: ArrayList<data_application_internship>)  : RecyclerView.Adapter<internshipAppliedAdapter.ViewHolder>() {
 

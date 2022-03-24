@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.internfreak.fragment.studentdata
 import com.google.android.material.textfield.TextInputEditText
@@ -32,10 +33,15 @@ class StudentDetails : AppCompatActivity() {
         val QDept_student= findViewById<TextInputEditText>(R.id.Qualifications_input3)
         val skills_student = findViewById<TextInputEditText>(R.id.Skills_input)
 
-        val Submit_button_student = findViewById<Button>(R.id.Submit_student)
+        val Submit_button_student = findViewById<ImageButton>(R.id.Submit_student)
 
 
+        val Gotocompany_text = findViewById<TextView>(R.id.gotocompany_textview)
 
+        Gotocompany_text.setOnClickListener {
+            val intent = Intent(this,CompanyDetails::class.java)
+            startActivity(intent)
+        }
 
         Submit_button_student.setOnClickListener {
 

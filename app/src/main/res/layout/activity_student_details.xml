@@ -243,8 +243,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-        </LinearLayout>
-    </ScrollView>
+
 
     <ImageButton
         android:id="@+id/Submit_student"
@@ -253,23 +252,25 @@
         android:background="@color/background"
         android:src="@drawable/ic_btn_submit"
         android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/gotocompany_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/gotocompany_textview"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="-->
-<!--Want to host internships? Click here to Continue as a company"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/Submit_student"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:gravity="center"-->
-<!--        />-->
+    <TextView
+        android:id="@+id/gotocompany_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+Want to host internships? Click here to Continue as a company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Submit_student"
+        android:textColor="@color/white"
+        android:gravity="center"
+        />
 
-
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
