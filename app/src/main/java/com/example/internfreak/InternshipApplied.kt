@@ -51,9 +51,5 @@ class InternshipApplied : AppCompatActivity() {
             }
         })
 
-
-
-
-
     }
 }
