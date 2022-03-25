@@ -3,6 +3,7 @@ package com.example.internfreak
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.content.IntentSender
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,9 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import com.example.internfreak.fragment.studentdata
+import com.google.android.gms.common.api.ResolvableApiException
+import com.google.android.gms.location.*
+import com.google.android.gms.tasks.Task
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -39,8 +43,7 @@ class StudentDetails : AppCompatActivity() {
         val Gotocompany_text = findViewById<TextView>(R.id.gotocompany_textview)
 
         Gotocompany_text.setOnClickListener {
-            val intent = Intent(this,CompanyDetails::class.java)
-            startActivity(intent)
+            Onlocation()
         }
 
         Submit_button_student.setOnClickListener {
@@ -54,6 +57,43 @@ class StudentDetails : AppCompatActivity() {
 
         }
 
+
+    }
+
+    private fun Onlocation(){
+
+        val locationRequest = LocationRequest.create().apply {
+            interval = 10000
+            fastestInterval = 5000
+            priority = LocationRequest.PRIORITY_LOW_POWER
+        }
+
+        val builder = LocationSettingsRequest.Builder()
+            .addLocationRequest(locationRequest)
+        val client: SettingsClient = LocationServices.getSettingsClient(this)
+        val task: Task<LocationSettingsResponse> = client.checkLocationSettings(builder.build())
+        task.addOnSuccessListener {
+            val intent = Intent(this, CompanyDetails::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            Log.d("MainActivity","task called")
+        }
+
+        task.addOnFailureListener { exception ->
+            if (exception is ResolvableApiException){
+                // Location settings are not satisfied, but this can be fixed
+                // by showing the user a dialog.
+                try {
+                    // Show the dialog by calling startResolutionForResult(),
+                    // and check the result in onActivityResult().
+                    val REQUEST_CHECK_SETTINGS =1
+                    exception.startResolutionForResult(this@StudentDetails,
+                        REQUEST_CHECK_SETTINGS)
+                } catch (sendEx: IntentSender.SendIntentException) {
+                    // Ignore the error.
+                }
+            }
+        }
 
     }
 

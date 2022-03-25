@@ -11,7 +11,7 @@ import com.example.internfreak.Adapter.Connect_Adapter
 import com.example.internfreak.R
 import com.example.internfreak.data.data1
 
-// TODO: Rename parameter arguments, choose names that match
+
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"

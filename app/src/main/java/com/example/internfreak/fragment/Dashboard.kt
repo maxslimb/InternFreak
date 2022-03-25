@@ -1,20 +1,25 @@
 package com.example.internfreak.fragment
 
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.R
+import com.example.internfreak.SearchActivity
+import com.example.internfreak.SignInActivity
 import com.example.internfreak.data.company_data
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 
-// TODO: Rename parameter arguments, choose names that match
+
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -26,7 +31,7 @@ private lateinit var database: DatabaseReference
  * create an instance of this fragment.
  */
 class Dashboard : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -40,13 +45,18 @@ class Dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val Search_View = view.findViewById<SearchView>(R.id.searchview)
+        Search_View.setOnClickListener {
+            val intent= Intent(view.context, SearchActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
         database = FirebaseDatabase.getInstance().getReference("Company/Internships")
         val company_data = arrayListOf<company_data>()
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onDataChange(p0: DataSnapshot) {
@@ -86,7 +96,7 @@ class Dashboard : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment Dashboard.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Dashboard().apply {

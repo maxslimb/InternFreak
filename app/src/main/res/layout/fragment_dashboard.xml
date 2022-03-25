@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="212dp"
         android:layout_height="35dp"
-        android:layout_marginLeft="48dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:text="InternFreak"
         android:textSize="22sp"
@@ -28,6 +28,7 @@
 
 
     <SearchView
+        android:id="@+id/searchview"
         android:layout_width="299dp"
         android:layout_height="46dp"
         android:layout_marginLeft="50dp"
