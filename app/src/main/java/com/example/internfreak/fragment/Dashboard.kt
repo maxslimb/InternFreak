@@ -1,15 +1,20 @@
 package com.example.internfreak.fragment
 
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internfreak.R
+import com.example.internfreak.SearchActivity
+import com.example.internfreak.SignInActivity
 import com.example.internfreak.data.company_data
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
@@ -40,7 +45,12 @@ class Dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val Search_View = view.findViewById<SearchView>(R.id.searchview)
+        Search_View.setOnClickListener {
+            val intent= Intent(view.context, SearchActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
         database = FirebaseDatabase.getInstance().getReference("Company/Internships")
         val company_data = arrayListOf<company_data>()
 

@@ -28,6 +28,7 @@
 
 
     <SearchView
+        android:id="@+id/searchview"
         android:layout_width="299dp"
         android:layout_height="46dp"
         android:layout_marginLeft="50dp"

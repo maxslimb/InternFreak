@@ -113,6 +113,8 @@ class CompanyDetails : AppCompatActivity() {
             .check();
     }
 
+
+
     fun getLastKnownLocation() {
         if (ActivityCompat.checkSelfPermission(
                 this@CompanyDetails,
