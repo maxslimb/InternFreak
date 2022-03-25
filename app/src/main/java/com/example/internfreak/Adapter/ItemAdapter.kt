@@ -1,5 +1,6 @@
 package com.example.internfreak.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.internfreak.InternshipDetails
 import com.example.internfreak.R
 import com.example.internfreak.data.company_data
 
@@ -23,6 +25,22 @@ class ItemAdapter:  RecyclerView.Adapter<ItemAdapter.ItemAdapterVH>(), Filterabl
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemAdapter.ItemAdapterVH {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.itemview_dashboard, parent, false)
         val holder = ItemAdapterVH(view)
+        view.setOnClickListener {
+
+            val intent = Intent(parent.context, InternshipDetails::class.java)
+            intent.putExtra("Job_Role",itemModalList[holder.adapterPosition].Job_Role)
+            intent.putExtra("Description",itemModalList[holder.adapterPosition].Description)
+            intent.putExtra("Company_Name",itemModalList[holder.adapterPosition].Company_Name)
+            intent.putExtra("Openings",itemModalList[holder.adapterPosition].Openings)
+            intent.putExtra("Start_Date",itemModalList[holder.adapterPosition].Start_Date)
+            intent.putExtra("Duration",itemModalList[holder.adapterPosition].Duration)
+            intent.putExtra("Perks",itemModalList[holder.adapterPosition].Perks)
+            intent.putExtra("Stipend",itemModalList[holder.adapterPosition].Stipend)
+            intent.putExtra("Location_lat",itemModalList[holder.adapterPosition].location_lat)
+            intent.putExtra("Location_long",itemModalList[holder.adapterPosition].location_long)
+            intent.putExtra("uid",itemModalList[holder.adapterPosition].uid)
+            parent.context.startActivity(intent)
+        }
         return holder
     }
 
