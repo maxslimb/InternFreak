@@ -19,7 +19,7 @@ import com.example.internfreak.data.company_data
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 
-// TODO: Rename parameter arguments, choose names that match
+
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -31,7 +31,7 @@ private lateinit var database: DatabaseReference
  * create an instance of this fragment.
  */
 class Dashboard : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -56,7 +56,7 @@ class Dashboard : Fragment() {
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onDataChange(p0: DataSnapshot) {
@@ -96,7 +96,7 @@ class Dashboard : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment Dashboard.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Dashboard().apply {
