@@ -29,7 +29,7 @@ The main idea behind building this app is basically to stop the hassle of findin
 
 2.Firebase Authentication & Realtime Database
 
-3. Google GMS Location Services
+3.Google GMS Location Services
 
 
 
