@@ -27,7 +27,9 @@ The main idea behind building this app is basically to stop the hassle of findin
 
 1.Android + Kotlin Programming Language + XML
 
-2.Firebase Realtime Database
+2.Firebase Authentication & Realtime Database
+
+3. Google GMS Location Services
 
 
 
