@@ -121,9 +121,9 @@ class Nearby_Internship : Fragment() {
 
                             snapshot.children.forEach {
                                 Log.d("location","${it.value}")
-                                val long = it.child("location_long").value.toString().toDouble()
-                                val lat = it.child("location_lat").value.toString().toDouble()
-                                Log.d("location","${it.child("location_long").value}")
+                                val long = it.child("Location_long").value.toString().toDouble()
+                                val lat = it.child("Location_lat").value.toString().toDouble()
+                                Log.d("location","${it.child("Location_long").value}")
                                 if((lat<lat_max)&&(lat>lat_min)&&(long>long_min)&&(long<long_max)){
                                     Log.d("data_selected","${it.value}")
                                     it.getValue<datanearby>()?.let { it1 -> data.add(it1) }
