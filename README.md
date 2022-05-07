@@ -1,5 +1,5 @@
 # InternFreak
-Alegria Hackathon App
+App developed at Alegria Hackathon
 
 Choosing the right internship can set you up for success by providing opportunities that benefit your professional position in the workforce. 
 
